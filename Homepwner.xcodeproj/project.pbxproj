@@ -22,7 +22,8 @@
 		56F0896919236EBA00A14970 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F0896819236EBA00A14970 /* BNRItemsViewController.m */; };
 		56F0896C192379F300A14970 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F0896B192379F300A14970 /* BNRItem.m */; };
 		56F0896F1924D89D00A14970 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F0896E1924D89D00A14970 /* BNRItemStore.m */; };
-		56F089711924E6D100A14970 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F089701924E6D100A14970 /* HeaderView.xib */; };
+		56F089781925922F00A14970 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F089761925922F00A14970 /* BNRDetailViewController.m */; };
+		56F089791925922F00A14970 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56F089771925922F00A14970 /* BNRDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,9 @@
 		56F0896B192379F300A14970 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItem.m; path = ../BNRItem.m; sourceTree = "<group>"; };
 		56F0896D1924D89D00A14970 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRItemStore.h; path = ../BNRItemStore.h; sourceTree = "<group>"; };
 		56F0896E1924D89D00A14970 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItemStore.m; path = ../BNRItemStore.m; sourceTree = "<group>"; };
-		56F089701924E6D100A14970 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		56F089751925922F00A14970 /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRDetailViewController.h; path = ../BNRDetailViewController.h; sourceTree = "<group>"; };
+		56F089761925922F00A14970 /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRDetailViewController.m; path = ../BNRDetailViewController.m; sourceTree = "<group>"; };
+		56F089771925922F00A14970 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRDetailViewController.xib; path = ../BNRDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +91,6 @@
 		56F0892C19236E4700A14970 = {
 			isa = PBXGroup;
 			children = (
-				56F089701924E6D100A14970 /* HeaderView.xib */,
 				56F0893E19236E4700A14970 /* Homepwner */,
 				56F0895719236E4700A14970 /* HomepwnerTests */,
 				56F0893719236E4700A14970 /* Frameworks */,
@@ -119,6 +121,9 @@
 		56F0893E19236E4700A14970 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				56F089751925922F00A14970 /* BNRDetailViewController.h */,
+				56F089761925922F00A14970 /* BNRDetailViewController.m */,
+				56F089771925922F00A14970 /* BNRDetailViewController.xib */,
 				56F0896D1924D89D00A14970 /* BNRItemStore.h */,
 				56F0896E1924D89D00A14970 /* BNRItemStore.m */,
 				56F0896A192379F300A14970 /* BNRItem.h */,
@@ -238,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56F089711924E6D100A14970 /* HeaderView.xib in Resources */,
+				56F089791925922F00A14970 /* BNRDetailViewController.xib in Resources */,
 				56F0894319236E4700A14970 /* InfoPlist.strings in Resources */,
 				56F0894B19236E4700A14970 /* Images.xcassets in Resources */,
 			);
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F089781925922F00A14970 /* BNRDetailViewController.m in Sources */,
 				56F0896F1924D89D00A14970 /* BNRItemStore.m in Sources */,
 				56F0896919236EBA00A14970 /* BNRItemsViewController.m in Sources */,
 				56F0896C192379F300A14970 /* BNRItem.m in Sources */,

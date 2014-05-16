@@ -11,6 +11,7 @@
 @interface BNRItemsViewController : UITableViewController
 
 
+@property (nonatomic, strong) IBOutlet UIView *headerView;
 
 
 
