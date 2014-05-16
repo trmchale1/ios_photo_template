@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
+#import "BNRImageStore.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 @interface BNRItemStore ()
@@ -65,6 +66,12 @@
 
 - (void)removeItem:(BNRItem *)item
 {
+    
+    NSString *key = item.itemKey;
+    
+    [[BNRImageStore sharedStore] deleteImageForKey:key];
+   
+    
     [self.privateItems removeObjectIdenticalTo:item];
 }
 
