@@ -10,7 +10,7 @@
 #import "BNRItem.h"
 #import "BNRImageStore.h"
 
-@interface BNRDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface BNRDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialField;
 
@@ -82,6 +82,17 @@
     
     // Use filtered NSDate object to set dateLabel contents
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    
+  //  NSString *imageKey = self.item.imageKey;
+    
+    // Get the image for its image key from the image store
+//    UIImage *imageToDisplay = [[BNRImageStore sharedStore] imageForKey:imageKey];
+    
+    // Use that image to put on the screen in the imageView
+  //  self.imageView.image = imageToDisplay;
+    
+    
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -104,6 +115,15 @@
     self.navigationItem.title = _item.itemName;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (IBAction)backgroundTapped:(id)sender {
+    
+    [self.view endEditing:YES];
+}
 @end
 
 

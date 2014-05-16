@@ -30,10 +30,7 @@ serialNumber:(NSString *)sNumber
         NSUUID *uuid = [[NSUUID alloc] init];
         NSString *key = [uuid UUIDString];
         _itemKey = key;
-        
-  
-        
-        
+ 
     }
     
     // Return the address of the newly initialized object

@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface BNRImageStore : UIViewController
-
+@interface BNRImageStore : NSObject
 + (instancetype)sharedStore;
 
 - (void)setImage:(UIImage *)image forKey:(NSString *)key;
