@@ -19,6 +19,7 @@
 @property (nonatomic, copy) NSString *itemKey;
 
 
+
 + (instancetype)randomItem;
 
 // Designated initializer

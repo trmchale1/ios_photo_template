@@ -20,8 +20,8 @@
 @end
 
 @implementation BNRDetailViewController
-- (IBAction)takePicture:(id)sender {
-    
+- (IBAction)takePicture:(id)sender
+{
     UIImagePickerController *imagePicker =
     [[UIImagePickerController alloc] init];
     
@@ -33,10 +33,9 @@
     } else {
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    
-     imagePicker.delegate = self;
+    imagePicker.delegate = self;
     [self presentViewController:imagePicker animated:YES completion:nil];
-
+    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker
@@ -45,12 +44,10 @@
     // Get picked image from info dictionary
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
-    
-     // Store the image in the BNRImageStore for this key
+    // Storing the image in BNRImageStore
     [[BNRImageStore sharedStore] setImage:image
-                                   forKey:self.item.itemKey];
+                                     forKey:self.item.itemKey];
     
- 
     
     // Put that image onto the screen in our image view
     self.imageView.image = image;
@@ -59,8 +56,6 @@
     // you must call this dismiss method
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -83,16 +78,14 @@
     // Use filtered NSDate object to set dateLabel contents
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
     
-  //  NSString *imageKey = self.item.imageKey;
-    
-    // Get the image for its image key from the image store
-//    UIImage *imageToDisplay = [[BNRImageStore sharedStore] imageForKey:imageKey];
-    
-    // Use that image to put on the screen in the imageView
-  //  self.imageView.image = imageToDisplay;
-    
-    
-    
+    NSString *imageKey = self.item.itemKey;
+//    
+//    // Get the image for its image key from the image store
+    UIImage *imageToDisplay = [[BNRImageStore sharedStore] imageForKey:imageKey];
+//    
+//    // Use that image to put on the screen in the imageView
+    self.imageView.image = imageToDisplay;
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated

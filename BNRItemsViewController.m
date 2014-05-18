@@ -11,8 +11,6 @@
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 
-
-
 @implementation BNRItemsViewController
 
 - (void)tableView:(UITableView *)tableView
@@ -24,18 +22,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     BNRItem *selectedItem = items[indexPath.row];
     
     detailViewController.item = selectedItem;
-
     
     [self.navigationController pushViewController:detailViewController
                                          animated:YES];
-
-    
-    
-    // Give detail view controller a pointer to the item object
-    
- 
-    
-    // Push it onto the top of the navigation controller's stack
     
 }
 - (instancetype)init
